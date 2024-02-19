@@ -17,6 +17,9 @@
             <h2>
                 Author: {{ $portfolio->author }}
             </h2>
+            <p>
+                {{ $portfolio->type->name}}
+            </p>
             <p class="mt-3">
                 {{ $portfolio->description }}
             </p>
@@ -33,7 +36,7 @@
                 @method('DELETE')
                 <button type="submit" class="btn btn-warning btn-sm d-inline-block" data-bs-toggle="modal" data-bs-target="#exampleModal-{{ $portfolio->id }}">
                     Delete
-               </button>
+                </button>
             </form>
         </div>
     </div>

@@ -13,6 +13,13 @@ class Portfolio extends Model
         'project',
         'author',
         'description',
-        'date'
+        'date',
+        'type_id',
     ]; 
+
+    public function type(){
+        return $this->belongsTo(Type::class);
+    }
 }
+
+

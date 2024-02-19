@@ -15,6 +15,7 @@
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
+                        <th scope="col">Type</th>
                         <th scope="col">Project</th>
                         <th scope="col">Author</th>
                         <th scope="col">Description</th>
@@ -25,7 +26,8 @@
                 <tbody>
                     @forelse ($portfolios as $portfolio)
                     <tr>
-                        <th scope="row">{{$portfolio->id}}</th>
+                        <td scope="row">{{$portfolio->id}}</td>
+                        <td>{{ $portfolio->type->name }}</td>
                         <td>{{$portfolio->project}}</td>
                         <td>{{$portfolio->author}}</td>
                         <td>{{$portfolio->description}}</td>
